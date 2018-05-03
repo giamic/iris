@@ -94,7 +94,7 @@ def main(unused_argv):
     feature_columns = [
         tf.feature_column.numeric_column(key, shape=1) for key in FEATURE_KEYS]
     classifier = tf.estimator.DNNClassifier(
-        feature_columns=feature_columns, hidden_units=[10, 20, 10], n_classes=3)
+        feature_columns=feature_columns, hidden_units=[10, 20, 10], n_classes=3, model_dir="../models/model_ext/")
 
     # Train.
     train_input_fn = input_fn(IRIS_TRAINING, num_training_data, batch_size=32,

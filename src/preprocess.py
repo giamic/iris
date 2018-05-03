@@ -12,4 +12,4 @@ test = df[~msk]
 
 # Write train and test csv to disk
 train.to_csv("../data/train.csv", index=False, header=False)
-test.to_csv("../data/test.csv", index=False, header=False)
+test.to_csv("../data/validation.csv", index=False, header=False)
